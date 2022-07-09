@@ -1,4 +1,4 @@
-import { TaskStauts } from "src/tasks/task-status.enum";
+import { TaskStauts } from "../tasks/task-status.enum";
 import { Column, PrimaryGeneratedColumn } from "typeorm";
 
 export class Task {
