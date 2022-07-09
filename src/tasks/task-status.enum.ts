@@ -4,5 +4,5 @@ export enum TaskStauts {
   // 実行中
   EXECUTION = 2,
   // 完了
-  COMPLETION = 3,
+  COMPLETE = 3,
 }
