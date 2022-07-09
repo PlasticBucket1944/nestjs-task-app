@@ -1,6 +1,7 @@
 import { TaskStauts } from "../tasks/task-status.enum";
-import { Column, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
+@Entity()
 export class Task {
   @PrimaryGeneratedColumn('uuid', { comment: 'ID' })
   id:string;
