@@ -4,7 +4,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 @Entity()
 export class Task {
   @PrimaryGeneratedColumn('uuid', { comment: 'ID' })
-  id:string;
+  id: string;
 
   @Column({ comment: 'タスク名' })
   name: string;
