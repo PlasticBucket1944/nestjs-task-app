@@ -10,7 +10,7 @@ export class Task {
   name: string;
 
   @Column({ comment: 'タスク状態 1:未実行、2:実行中、3:完了' })
-  stasus: TaskStauts;
+  status: TaskStauts;
 
   @Column({ comment: '更新ログ項目：作成日' })
   createdAt: string;
