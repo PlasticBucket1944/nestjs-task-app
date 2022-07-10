@@ -1,6 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Task } from 'src/entities/task.entity';
 import { CreateTaskDto } from './dto/create-task.dto';
+import { TaskStauts } from './task-status.enum';
 import { TaskRepository } from './task.repository';
 
 
@@ -22,5 +23,13 @@ export class TasksService {
 
   async create(createTaskDto: CreateTaskDto): Promise<Task> {
     return await this.taskRepository.createTask(createTaskDto);
+  }
+
+  async update(id: string, status: TaskStauts): Promise<Task> {
+    const task = await this.findById(id);
+    task.status = status;
+    task.updatedAt = new Date().toISOString();
+    await this.taskRepository.save(task);
+    return task;
   }
 }
