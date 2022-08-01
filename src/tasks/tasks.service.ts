@@ -10,7 +10,12 @@ export class TasksService {
   constructor(private readonly taskRepository: TaskRepository) {}
 
   async findAll(): Promise<Task[]> {
-    return await this.taskRepository.find();
+    // 作成時間の降順で全件取得
+    return await this.taskRepository.find({
+      order: {
+          createdAt: "DESC",
+      },
+    });
   }
 
   async findById(id: string): Promise<Task> {
