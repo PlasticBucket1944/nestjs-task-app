@@ -16,8 +16,8 @@ import { TasksModule } from './tasks/tasks.module';
       // entities: [__dirname + '/entities/*.js'],
       migrations: ['dist/migrations/*.js'],
       cli: {
-          entitiesDir: 'src/entities',
-          migrationsDir: 'src/migrations',
+          entitiesDir: '../entities',
+          migrationsDir: '../migrations',
       },
     }),
     TasksModule,
