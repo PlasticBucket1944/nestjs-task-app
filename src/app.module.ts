@@ -13,7 +13,7 @@ import { TasksModule } from './tasks/tasks.module';
       database: process.env.DB_DATABASE,
       autoLoadEntities: true,
       // entities: ['dist/entities/*.entity.js'],
-      entities: [__dirname + '/entity/*.js'],
+      entities: [__dirname + '/dist/entities/*.js'],
       migrations: ['dist/migrations/*.js'],
       cli: {
           entitiesDir: 'src/entities',
