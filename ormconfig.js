@@ -1,5 +1,3 @@
-import { Task } from './dist/entities/task.entity';
-
 module.exports = {
   type: 'postgres',
   host: process.env.DB_HOST,
@@ -8,9 +6,9 @@ module.exports = {
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
   autoLoadEntities: true,
-  // entities: ['dist/entities/*.entity.js'],
+  entities: ['dist/entities/*.entity.js'],
   // entities: [__dirname + '/entities/*.js'],
-  entities: [Task],
+  // entities: ['/entities/*.js'],
   migrations: ['dist/migrations/*.js'],
   cli: {
       entitiesDir: '../entities',
