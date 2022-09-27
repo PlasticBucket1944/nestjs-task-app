@@ -6,7 +6,7 @@ module.exports = {
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
   autoLoadEntities: true,
-  entities: ['dist/**/*.entity.js'],
+  entities: ['dist/entities/*.entity.js'],
   migrations: ['dist/migrations/*.js'],
   cli: {
       entitiesDir: '../entities',
