@@ -12,4 +12,6 @@ module.exports = {
       entitiesDir: 'src/entities',
       migrationsDir: 'src/migrations',
   },
+  // TODO 2022/09/27: 本番環境では推奨されていない。暫定対応
+  synchronize: true,
 };
