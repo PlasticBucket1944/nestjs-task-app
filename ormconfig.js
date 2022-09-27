@@ -8,7 +8,8 @@ module.exports = {
   autoLoadEntities: true,
   // entities: ['dist/entities/*.entity.js'],
   // entities: [__dirname + '/entities/*.js'],
-  entities: [__dirname + '/entities/**/*.js'],
+  // entities: [__dirname + '/entities/**/*.js'],
+  entities: [`src/entity/*.${process.env.ENV === "local" ? "ts" : "js"}`],
   migrations: ['dist/migrations/*.js'],
   cli: {
       entitiesDir: '../entities',
