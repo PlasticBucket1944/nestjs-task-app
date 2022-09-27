@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TasksModule } from './tasks/tasks.module';
+import { Task } from './entities/task.entity';
 
 @Module({
   imports: [
@@ -14,7 +15,7 @@ import { TasksModule } from './tasks/tasks.module';
       autoLoadEntities: true,
       // entities: ['dist/entities/*.entity.js'],
       // entities: [__dirname + '/entities/*.js'],
-      entities: ['/entities/*.js'],
+      entities: [Task],
       migrations: ['dist/migrations/*.js'],
       cli: {
           entitiesDir: '../entities',
