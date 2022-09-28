@@ -17,18 +17,19 @@ typeorm : 0.2.45
 
 ```bash
 # アプリケーションをクローンします
-# ルート下にenvフォルダを作成します
-# env下にdevelopment.env(ローカル用)とproduction.env(本番用)を作成します
-# .envに以下の情報を記載します
-DB_TYPE=
-DB_HOST=
-DB_PORT=
-DB_USERNAME=
-DB_PASSWORD=
-DB_DATABASE=
-CORS_ORIGIN=通信を許可するIPとPORTを指定
-# 環境を設定するコマンドを実行します。これによって読み込まれる.envが変わります。
-$ export NODE_ENV='development' or 'production'
+# 環境を設定するコマンドを実行します。
+NODE_ENV：'development' or 'production'
+DB～系：DB環境に合わせて
+CORS_ORIGIN：通信を許可するIPとPORTを指定
+
+$ export NODE_ENV=
+$ export DB_TYPE=
+$ export DB_HOST=
+$ export DB_PORT=
+$ export DB_USERNAME=
+$ export DB_PASSWORD=
+$ export DB_DATABASE=
+$ export CORS_ORIGIN=
 ```
 
 ## Run
